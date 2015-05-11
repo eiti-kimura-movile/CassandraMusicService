@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.datastax.cassandra:cassandra-driver-core:2.0.10'
+    compile 'ch.qos.logback:logback-classic:1.0.13'
+    compile 'ch.qos.logback:logback-core:1.0.13'
+}
